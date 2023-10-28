@@ -1,0 +1,25 @@
+<button class="btn btn-danger mb-1 w-25" [routerLink]="['/Student/new']">Add student</button>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Address</th>
+      <th scope="col">School</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of students;let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{std.name}}</td>
+      <td>{{std.age}}</td>
+      <td>{{std.address}}</td>
+      <td>{{std.school}}</td>
+      <td><i [routerLink]="['/Student','details',std.id]" class="bi bi-eye fs-4 text-warning"></i>
+      <i [routerLink]="['/Student/edit',std.id]" class="bi fs-4 bi-pencil-square text-success"></i>
+      <i class="bi text-danger fs-4 bi-trash" (click)="delete(std.id)"></i></td>
+    </tr>
+  </tbody>
+</table>

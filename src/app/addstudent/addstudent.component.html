@@ -1,0 +1,26 @@
+<div>
+  <div class="container-md">
+ <div style="background-color: #eee; padding: 10px 20px 60px; width: 500px; margin: auto;">
+  <h2 class="text-danger text-center">Add or Edit Student</h2>
+  <form (submit)="GetDate($event)" class="was-validated">
+    <div>
+      <label for="name" class="form-label">Student name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="Student.name"  required>
+    </div>
+    <div >
+      <label for="address" class="form-label">Student address</label>
+      <input type="text" class="form-control" id="address" name="address" [(ngModel)]="Student.address" required>
+    </div>
+    <div>
+      <label for="age" class="form-label">Student age</label>
+      <input type="number" class="form-control" id="age"  name="age" [(ngModel)]="Student.age"  required>
+    </div>
+    <div>
+      <label for="school" class="form-label">Student school</label>
+      <input type="text" class="form-control" id="school"  name="school"  [(ngModel)]="Student.school"  required>
+    </div>
+    <button type="button" class="btn btn-danger mt-3 w-100">Confirm</button>
+  </form>
+ </div>
+</div>
+</div>

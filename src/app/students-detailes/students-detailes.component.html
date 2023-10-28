@@ -1,0 +1,15 @@
+<div class="contaier-md">
+  <div style="width: 500px; margin: auto;">
+    <h3 class="text-danger mb-4">welcome our student {{Student?.name}} this your details:-</h3>
+    <div class="card border-primary text-capitalize">
+      <div class="card-header">{{Student?.name}}</div>
+      <div class="card-body">
+        <h5 class="card-title">your age is :- {{Student?.age}}</h5>
+        <p class="card-text">you are live in {{Student?.address}} and go to {{Student?.school}} school</p>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-danger w-100" [routerLink]="['/Student']">Go Back</button>
+  </div>
+
+</div>
